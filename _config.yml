@@ -1,0 +1,23 @@
+title: Miguel Ángel Méndez Lucero
+description: Ph.D. Researcher WebPage.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://miguel.cacaoai.com" # the base hostname & protocol for your site
+# Permalink settings
+permalink: /:year/:month/:day/:title.html
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+port: 55080
+
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+

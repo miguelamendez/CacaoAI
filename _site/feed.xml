@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:55080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:55080/" rel="alternate" type="text/html" /><updated>2025-09-09T05:02:35-06:00</updated><id>http://localhost:55080/feed.xml</id><title type="html">Miguel Ángel Méndez Lucero</title><subtitle>Ph.D. Researcher WebPage.</subtitle><entry><title type="html">A Survey on Current Open Source Models for Video Generation</title><link href="http://localhost:55080/2025/04/10/opensource_videogen.html" rel="alternate" type="text/html" title="A Survey on Current Open Source Models for Video Generation" /><published>2025-04-10T00:00:00-06:00</published><updated>2025-04-10T00:00:00-06:00</updated><id>http://localhost:55080/2025/04/10/opensource_videogen</id><content type="html" xml:base="http://localhost:55080/2025/04/10/opensource_videogen.html"><![CDATA[<h2 id="1-ltx-video">1. <strong>LTX-Video</strong></h2>
+
+<h3 id="company--origin"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Lightricks</strong>, a company based in <strong>Israel</strong>.</li>
+  <li><strong>Release Date</strong>: March 5, 2025.</li>
+</ul>
+
+<h3 id="capabilities"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Text-to-Video, Image-to-Video, and Keyframe-based Animation</strong>: Supports a wide range of video generation tasks.</li>
+  <li><strong>Real-time Generation</strong>: Produces 5 seconds of 24 FPS video at 768x512 resolution in just 2 seconds on an Nvidia H100 GPU.</li>
+  <li><strong>High Compression Ratio</strong>: Achieves a 1:192 compression ratio with spatiotemporal downscaling of 32 x 32 x 8 pixels per token.</li>
+  <li><strong>Fine Detail Preservation</strong>: The VAE decoder handles both latent-to-pixel conversion and final denoising, preserving fine details.</li>
+</ul>
+
+<h3 id="license"><strong>License</strong></h3>
+<ul>
+  <li><strong>OpenRail-M</strong>: Allows commercial use under certain conditions.</li>
+</ul>
+
+<h3 id="links"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/Lightricks/LTX-Video">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/Lightricks/LTX-Video">Hugging Face</a></li>
+  <li><a href="https://arxiv.org/abs/2501.00103">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="2-hunyuanvideo">2. <strong>HunyuanVideo</strong></h2>
+
+<h3 id="company--origin-1"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Tencent</strong>, a Chinese technology company.</li>
+  <li><strong>Release Date</strong>: December 2024.</li>
+</ul>
+
+<h3 id="capabilities-1"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Large-Scale Model</strong>: Trained with over 13 billion parameters, making it the largest open-source video generation model.</li>
+  <li><strong>High Visual Quality</strong>: Produces videos with excellent text-video alignment and advanced filming techniques.</li>
+  <li><strong>Image-to-Video Generation</strong>: Supports the generation of videos from images with LoRA training for customizable effects.</li>
+</ul>
+
+<h3 id="license-1"><strong>License</strong></h3>
+<ul>
+  <li><strong>Tencent Hunyuan Community License</strong>: Non-commercial use is allowed, with restrictions in the European Union, the United Kingdom, and South Korea.</li>
+</ul>
+
+<h3 id="links-1"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/Tencent/HunyuanVideo">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/tencent/HunyuanVideo">Hugging Face</a></li>
+  <li><a href="https://arxiv.org/abs/2412.03603">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="3-cogvideox">3. <strong>CogVideoX</strong></h2>
+
+<h3 id="company--origin-2"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>THUDM (Tsinghua University)</strong>, a research institution in China.</li>
+  <li><strong>Release Date</strong>: August 27, 2024.</li>
+</ul>
+
+<h3 id="capabilities-2"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Text-to-Video Generation</strong>: Generates 10-second continuous videos aligned with text prompts at 16 FPS and 768x1360 resolution.</li>
+  <li><strong>3D Variational Autoencoder (VAE)</strong>: Improves compression and fidelity for both spatial and temporal dimensions.</li>
+  <li><strong>Progressive Training</strong>: Enhances the generation of coherent, long-duration videos with significant motion dynamics.</li>
+</ul>
+
+<h3 id="license-2"><strong>License</strong></h3>
+<ul>
+  <li><strong>Apache 2.0 License</strong>: For the CogVideoX-2B model.</li>
+  <li><strong>CogVideoX License</strong>: For the CogVideoX-5B model.</li>
+</ul>
+
+<h3 id="cogvideoxlicense"><strong>CogVideoXLicense</strong></h3>
+<p>This license grants a non-exclusive, royalty-free, and non-transferable right to use the CogVideoX model for academic research and, with registration, for commercial purposes under specific conditions. Commercial use requires obtaining a basic license, allowing free usage up to 1 million monthly users, with additional licenses needed for higher usage. The software cannot be used for military, illegal, or harmful purposes, or for actions that harm China’s interests. The software is provided “as is” without warranties, and the licensor disclaims liability for any damages. Disputes are governed by Chinese law and resolved in Beijing’s Haidian District Court. The license may be updated, and inquiries should be directed to the provided contact.</p>
+<ol>
+  <li></li>
+</ol>
+
+<h3 id="links-2"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/THUDM/CogVideo">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/THUDM/CogVideoX1.5-5B">Hugging Face</a></li>
+  <li><a href="https://arxiv.org/pdf/2408.06072">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="4-wan21">4. <strong>Wan2.1</strong></h2>
+
+<h3 id="company--origin-3"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Wan-AI</strong>, a Chinese AI research company.</li>
+  <li><strong>Release Date</strong>: 2025.</li>
+</ul>
+
+<h3 id="capabilities-3"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Multi-Task Support</strong>: Excels in text-to-video, image-to-video, video editing, text-to-image, and video-to-audio generation.</li>
+  <li><strong>Consumer-Grade GPU Compatibility</strong>: The T2V-1.3B model requires only 8.19 GB of VRAM, making it accessible for most consumer-grade GPUs.</li>
+  <li><strong>Text Generation</strong>: Unique capability to generate both Chinese and English text within videos.</li>
+</ul>
+
+<h3 id="license-3"><strong>License</strong></h3>
+<ul>
+  <li><strong>Apache 2.0 License</strong>: For personal and commercial use. Encourages open research and democratizes access to state-of-the-art AI capabilities.</li>
+</ul>
+
+<h3 id="links-3"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/Wan-Video/Wan2.1">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/Wan-AI/Wan2.1-T2V-14B-Diffusers">Hugging Face</a></li>
+  <li><a href="https://github.com/Wan-Video/Wan2.1">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="5-mochi">5. <strong>Mochi</strong></h2>
+
+<h3 id="company--origin-4"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Genmo</strong>, a US-based AI research company.</li>
+  <li><strong>Release Date</strong>: 2024.</li>
+</ul>
+
+<h3 id="capabilities-4"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>High-Quality Motion</strong>: Demonstrates dramatic improvements in motion quality and strong prompt adherence.</li>
+  <li><strong>Open Source</strong>: Licensed under the Apache 2.0 license for personal and commercial use.</li>
+  <li><strong>Hosted Playground</strong>: Available for free on <a href="https://genmo.ai/play">Genmo.ai/play</a>.</li>
+</ul>
+
+<h3 id="license-4"><strong>License</strong></h3>
+<ul>
+  <li><strong>Apache 2.0 License</strong>:For personal and commercial use. Encourages open research and democratizes access to state-of-the-art AI capabilities.</li>
+</ul>
+
+<h3 id="links-4"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/genmoai/mochi">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/genmo/mochi-1-preview">Hugging Face</a></li>
+  <li><a href="https://github.com/genmoai/mochi">Research Paper</a></li>
+</ul>
+
+<hr />
+<h2 id="summary-table">Summary Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Model</strong></th>
+      <th><strong>Resolution</strong></th>
+      <th><strong>License</strong></th>
+      <th><strong>Year Created</strong></th>
+      <th><strong>Country of Origin</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTX-Video</td>
+      <td>768x512</td>
+      <td>OpenRail-M</td>
+      <td>2025</td>
+      <td>Israel</td>
+    </tr>
+    <tr>
+      <td>HunyuanVideo</td>
+      <td>Variable</td>
+      <td>Tencent Hunyuan Community License</td>
+      <td>2024</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>CogVideoX-5B</td>
+      <td>720x480</td>
+      <td>CogVideoX License</td>
+      <td>2024</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>CogVideoX-5B-I2V</td>
+      <td>768x1360</td>
+      <td>CogVideoX License</td>
+      <td>2024</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>Wan2.1</td>
+      <td>480P, 720P</td>
+      <td>Apache 2.0</td>
+      <td>2025</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>Mochi</td>
+      <td>480P (Base), HD (Coming)</td>
+      <td>Apache 2.0</td>
+      <td>2024</td>
+      <td>United States</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Only Apache Licenses are truly <a href="https://opensource.org/osd">OpenSource</a> .</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The landscape of open-source video generation is undergoing a transformative phase, driven by innovative models such as LTX-Video, HunyuanVideo, CogVideoX, Wan2.1, and Mochi. These models not only showcase impressive capabilities in video generation but also play a crucial role in democratizing access to AI technologies. Among these, models released under the Apache 2.0 license, like Wan2.1 and Mochi, stand out as fully open-source, enabling unrestricted experimentation and innovation.</p>
+
+<hr />
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="https://github.com/Lightricks/LTX-Video">LTX-Video GitHub</a></li>
+  <li><a href="https://github.com/Tencent/HunyuanVideo">HunyuanVideo GitHub</a></li>
+  <li><a href="https://github.com/THUDM/CogVideo">CogVideoX GitHub</a></li>
+  <li><a href="https://github.com/Wan-Video/Wan2.1">Wan2.1 GitHub</a></li>
+  <li><a href="https://github.com/genmoai/mochi">Mochi GitHub</a></li>
+</ul>
+
+<hr />]]></content><author><name></name></author><category term="t2v" /><category term="i2v" /><category term="opensource" /><summary type="html"><![CDATA[Video generation has seen remarkable advancements in recent years, with open-source models playing a pivotal role in democratizing access to cutting-edge AI capabilities. This blog post explores the current state of open-source video generation models, their capabilities, and the companies behind them.]]></summary></entry><entry><title type="html">Running DeepSeek-R1 on Ubuntu with llama.cpp</title><link href="http://localhost:55080/2025/04/09/llamacpp-deepseekr1.html" rel="alternate" type="text/html" title="Running DeepSeek-R1 on Ubuntu with llama.cpp" /><published>2025-04-09T00:00:00-06:00</published><updated>2025-04-09T00:00:00-06:00</updated><id>http://localhost:55080/2025/04/09/llamacpp-deepseekr1</id><content type="html" xml:base="http://localhost:55080/2025/04/09/llamacpp-deepseekr1.html"><![CDATA[<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before starting, ensure you have the following installed on your system:</p>
+
+<h3 id="system-dependencies">System Dependencies</h3>
+
+<ol>
+  <li><strong>Git</strong>: For cloning the repository.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>git
+</code></pre></div>    </div>
+  </li>
+  <li><strong>CMake</strong>: For building the project.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>cmake
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Build Essentials</strong>: Required for compiling the project.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>build-essential
+</code></pre></div>    </div>
+  </li>
+  <li><strong>CUDA (Optional)</strong>: If you plan to use CUDA-enabled GPUs.
+    <ul>
+      <li>Install CUDA toolkit from <a href="https://developer.nvidia.com/cuda-toolkit">NVIDIA’s official website</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="tools-for-downloading-the-model">Tools for Downloading the Model</h3>
+
+<ul>
+  <li><strong>wget or Hugging Face CLI</strong>: To download the model.</li>
+</ul>
+
+<hr />
+
+<h2 id="step-by-step-installation">Step-by-Step Installation</h2>
+
+<h3 id="step-1-clone-the-repository">Step 1: Clone the Repository</h3>
+
+<p>First, clone the <code class="language-plaintext highlighter-rouge">llama.cpp</code> repository to your local machine.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/ggml-org/llama.cpp.git
+</code></pre></div></div>
+
+<h3 id="step-2-navigate-to-the-repository-directory">Step 2: Navigate to the Repository Directory</h3>
+
+<p>Change directory to the cloned repository.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>llama.cpp
+</code></pre></div></div>
+
+<h3 id="step-3-pull-the-latest-changes">Step 3: Pull the Latest Changes</h3>
+
+<p>Ensure you have the latest version of the code.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+
+<h3 id="step-4-choose-hardware-configuration">Step 4: Choose Hardware Configuration</h3>
+
+<p>Select the appropriate build configuration based on your hardware.</p>
+
+<h4 id="for-cpu-only">For CPU Only</h4>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-B</span> build
+</code></pre></div></div>
+
+<h4 id="for-cuda-gpu">For CUDA GPU</h4>
+
+<p>If you have CUDA installed and want to leverage GPU acceleration:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-B</span> build <span class="nt">-DGGML_CUDA</span><span class="o">=</span>ON
+</code></pre></div></div>
+
+<h3 id="step-5-build-the-project">Step 5: Build the Project</h3>
+
+<p>Compile the project with the chosen configuration.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">--build</span> build <span class="nt">--config</span> Release
+</code></pre></div></div>
+
+<p><strong>Note:</strong> The build process may take several minutes, depending on your system’s performance.</p>
+
+<h3 id="step-6-copy-binaries-to-the-bin-directory">Step 6: Copy Binaries to the Bin Directory</h3>
+
+<p>After a successful build, copy the generated binaries to a directory of your choice (e.g., <code class="language-plaintext highlighter-rouge">~/bin</code>).</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/bin
+<span class="nb">cp </span>build/bin/<span class="k">*</span> ~/bin/
+</code></pre></div></div>
+
+<h3 id="step-7-download-the-deepseek-r1-model">Step 7: Download the DeepSeek-R1 Model</h3>
+
+<p>The DeepSeek-R1 model is available on Hugging Face. Use <code class="language-plaintext highlighter-rouge">wget</code> or the Hugging Face CLI to download it. For this tutorial, we will download the small 1.5B parameters version.</p>
+
+<ol>
+  <li>First, create the model directory:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/share/llama.cpp/models
+</code></pre></div>    </div>
+  </li>
+  <li>Download the model:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://huggingface.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-1.5B-Q8_0.gguf <span class="nt">-O</span> ~/.local/share/llama.cpp/models/DeepSeek-R1-Distill-Qwen-1.5B-Q8_0.gguf
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="step-8-run-the-server">Step 8: Run the Server</h2>
+
+<ol>
+  <li>Navigate to your bin directory:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/bin
+</code></pre></div>    </div>
+  </li>
+  <li>Run the server with the following command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./llama-server <span class="se">\</span>
+  <span class="nt">--model</span> ~/.local/share/llama.cpp/models/DeepSeek-R1-Distill-Qwen-32B-Q6_K.gguf <span class="se">\</span>
+  <span class="nt">--ctx-size</span> 32000 <span class="se">\</span>
+  <span class="nt">--host</span> 127.0.0.1 <span class="se">\</span>
+  <span class="nt">--port</span> 8080 <span class="se">\</span>
+  <span class="nt">--main-gpu</span> 0 <span class="se">\</span>
+  <span class="nt">--gpu-layers</span> 90
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--model</code>: Path to the DeepSeek-R1 model file.</li>
+  <li><code class="language-plaintext highlighter-rouge">--ctx-size</code>: Context window size (adjust as needed).</li>
+  <li><code class="language-plaintext highlighter-rouge">--host</code>: Server host address (default: localhost).</li>
+  <li><code class="language-plaintext highlighter-rouge">--port</code>: Server port (default: 8080).</li>
+  <li><code class="language-plaintext highlighter-rouge">--main-gpu</code>: Used for multi-GPU for inference.</li>
+  <li><code class="language-plaintext highlighter-rouge">--gpu-layers</code>: Number of layers to offload to GPU (adjust based on your GPU’s VRAM).</li>
+</ul>
+
+<hr />
+
+<h2 id="step-9-verify-the-installation">Step 9: Verify the Installation</h2>
+
+<ol>
+  <li>Ensure the server is running without errors.</li>
+  <li>You can access the chat UI at <code class="language-plaintext highlighter-rouge">http://localhost:8080</code> to chat with the model.</li>
+</ol>
+
+<hr />
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<ul>
+  <li><strong>Build Errors</strong>: Ensure all dependencies are installed and your CUDA setup is correct.</li>
+  <li><strong>Permission Issues</strong>: Use <code class="language-plaintext highlighter-rouge">sudo</code> where necessary or adjust file permissions.</li>
+  <li><strong>CUDA Not Detected</strong>: Verify CUDA is installed and properly configured on your system.</li>
+  <li><strong>Model Not Found</strong>: Double-check the model path and ensure the file exists.</li>
+</ul>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>You have successfully installed <code class="language-plaintext highlighter-rouge">llama.cpp</code> and set up the DeepSeek-R1 model to run locally. The server is now ready to serve requests at <code class="language-plaintext highlighter-rouge">http://localhost:8080</code>. You can use the chat interface in the link to interact with the model.</p>
+
+<p><strong>Note:</strong> Replace placeholders like <code class="language-plaintext highlighter-rouge">~/bin</code> and <code class="language-plaintext highlighter-rouge">~/.local/share/llama.cpp/models</code> with your actual directory paths as needed.</p>
+
+<p>Enjoy exploring the capabilities of DeepSeek-R1 with <code class="language-plaintext highlighter-rouge">llama.cpp</code>!</p>]]></content><author><name></name></author><category term="llm" /><category term="llamacpp" /><category term="deepseekr1" /><category term="shell" /><summary type="html"><![CDATA[This tutorial will guide you through installing `llama.cpp` and running the DeepSeek-R1 model locally on a Debian Distro. The process involves cloning the repository, configuring the build based on your hardware, and setting up the server to run the model.]]></summary></entry></feed>

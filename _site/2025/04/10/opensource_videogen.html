@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Survey on Current Open Source Models for Video Generation</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
+        <nav>
+            <ul id="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/categories/">Categories</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="post">
+    
+        <img src="/assets/images/cacaoai_cover.png" alt="A Survey on Current Open Source Models for Video Generation" class="header-image">
+    
+    <h1>A Survey on Current Open Source Models for Video Generation</h1>
+    <div class="post-meta">
+	    <time datetime="2025-04-10T00:00:00-06:00">10 Apr 2025</time><br><span class="post-tag"><a href=/categories#>t2v</a></span><span class="post-tag"><a href=/categories#>i2v</a></span><span class="post-tag"><a href=/categories#>opensource</a></span></div>
+    <p>Video generation has seen remarkable advancements in recent years, with open-source models playing a pivotal role in democratizing access to cutting-edge AI capabilities. This blog post explores the current state of open-source video generation models, their capabilities, and the companies behind them.</p>
+    <div class="post-content">
+        <h2 id="1-ltx-video">1. <strong>LTX-Video</strong></h2>
+
+<h3 id="company--origin"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Lightricks</strong>, a company based in <strong>Israel</strong>.</li>
+  <li><strong>Release Date</strong>: March 5, 2025.</li>
+</ul>
+
+<h3 id="capabilities"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Text-to-Video, Image-to-Video, and Keyframe-based Animation</strong>: Supports a wide range of video generation tasks.</li>
+  <li><strong>Real-time Generation</strong>: Produces 5 seconds of 24 FPS video at 768x512 resolution in just 2 seconds on an Nvidia H100 GPU.</li>
+  <li><strong>High Compression Ratio</strong>: Achieves a 1:192 compression ratio with spatiotemporal downscaling of 32 x 32 x 8 pixels per token.</li>
+  <li><strong>Fine Detail Preservation</strong>: The VAE decoder handles both latent-to-pixel conversion and final denoising, preserving fine details.</li>
+</ul>
+
+<h3 id="license"><strong>License</strong></h3>
+<ul>
+  <li><strong>OpenRail-M</strong>: Allows commercial use under certain conditions.</li>
+</ul>
+
+<h3 id="links"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/Lightricks/LTX-Video">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/Lightricks/LTX-Video">Hugging Face</a></li>
+  <li><a href="https://arxiv.org/abs/2501.00103">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="2-hunyuanvideo">2. <strong>HunyuanVideo</strong></h2>
+
+<h3 id="company--origin-1"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Tencent</strong>, a Chinese technology company.</li>
+  <li><strong>Release Date</strong>: December 2024.</li>
+</ul>
+
+<h3 id="capabilities-1"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Large-Scale Model</strong>: Trained with over 13 billion parameters, making it the largest open-source video generation model.</li>
+  <li><strong>High Visual Quality</strong>: Produces videos with excellent text-video alignment and advanced filming techniques.</li>
+  <li><strong>Image-to-Video Generation</strong>: Supports the generation of videos from images with LoRA training for customizable effects.</li>
+</ul>
+
+<h3 id="license-1"><strong>License</strong></h3>
+<ul>
+  <li><strong>Tencent Hunyuan Community License</strong>: Non-commercial use is allowed, with restrictions in the European Union, the United Kingdom, and South Korea.</li>
+</ul>
+
+<h3 id="links-1"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/Tencent/HunyuanVideo">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/tencent/HunyuanVideo">Hugging Face</a></li>
+  <li><a href="https://arxiv.org/abs/2412.03603">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="3-cogvideox">3. <strong>CogVideoX</strong></h2>
+
+<h3 id="company--origin-2"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>THUDM (Tsinghua University)</strong>, a research institution in China.</li>
+  <li><strong>Release Date</strong>: August 27, 2024.</li>
+</ul>
+
+<h3 id="capabilities-2"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Text-to-Video Generation</strong>: Generates 10-second continuous videos aligned with text prompts at 16 FPS and 768x1360 resolution.</li>
+  <li><strong>3D Variational Autoencoder (VAE)</strong>: Improves compression and fidelity for both spatial and temporal dimensions.</li>
+  <li><strong>Progressive Training</strong>: Enhances the generation of coherent, long-duration videos with significant motion dynamics.</li>
+</ul>
+
+<h3 id="license-2"><strong>License</strong></h3>
+<ul>
+  <li><strong>Apache 2.0 License</strong>: For the CogVideoX-2B model.</li>
+  <li><strong>CogVideoX License</strong>: For the CogVideoX-5B model.</li>
+</ul>
+
+<h3 id="cogvideoxlicense"><strong>CogVideoXLicense</strong></h3>
+<p>This license grants a non-exclusive, royalty-free, and non-transferable right to use the CogVideoX model for academic research and, with registration, for commercial purposes under specific conditions. Commercial use requires obtaining a basic license, allowing free usage up to 1 million monthly users, with additional licenses needed for higher usage. The software cannot be used for military, illegal, or harmful purposes, or for actions that harm China’s interests. The software is provided “as is” without warranties, and the licensor disclaims liability for any damages. Disputes are governed by Chinese law and resolved in Beijing’s Haidian District Court. The license may be updated, and inquiries should be directed to the provided contact.</p>
+<ol>
+  <li></li>
+</ol>
+
+<h3 id="links-2"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/THUDM/CogVideo">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/THUDM/CogVideoX1.5-5B">Hugging Face</a></li>
+  <li><a href="https://arxiv.org/pdf/2408.06072">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="4-wan21">4. <strong>Wan2.1</strong></h2>
+
+<h3 id="company--origin-3"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Wan-AI</strong>, a Chinese AI research company.</li>
+  <li><strong>Release Date</strong>: 2025.</li>
+</ul>
+
+<h3 id="capabilities-3"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>Multi-Task Support</strong>: Excels in text-to-video, image-to-video, video editing, text-to-image, and video-to-audio generation.</li>
+  <li><strong>Consumer-Grade GPU Compatibility</strong>: The T2V-1.3B model requires only 8.19 GB of VRAM, making it accessible for most consumer-grade GPUs.</li>
+  <li><strong>Text Generation</strong>: Unique capability to generate both Chinese and English text within videos.</li>
+</ul>
+
+<h3 id="license-3"><strong>License</strong></h3>
+<ul>
+  <li><strong>Apache 2.0 License</strong>: For personal and commercial use. Encourages open research and democratizes access to state-of-the-art AI capabilities.</li>
+</ul>
+
+<h3 id="links-3"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/Wan-Video/Wan2.1">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/Wan-AI/Wan2.1-T2V-14B-Diffusers">Hugging Face</a></li>
+  <li><a href="https://github.com/Wan-Video/Wan2.1">Research Paper</a></li>
+</ul>
+
+<hr />
+
+<h2 id="5-mochi">5. <strong>Mochi</strong></h2>
+
+<h3 id="company--origin-4"><strong>Company &amp; Origin</strong></h3>
+<ul>
+  <li>Developed by <strong>Genmo</strong>, a US-based AI research company.</li>
+  <li><strong>Release Date</strong>: 2024.</li>
+</ul>
+
+<h3 id="capabilities-4"><strong>Capabilities</strong></h3>
+<ul>
+  <li><strong>High-Quality Motion</strong>: Demonstrates dramatic improvements in motion quality and strong prompt adherence.</li>
+  <li><strong>Open Source</strong>: Licensed under the Apache 2.0 license for personal and commercial use.</li>
+  <li><strong>Hosted Playground</strong>: Available for free on <a href="https://genmo.ai/play">Genmo.ai/play</a>.</li>
+</ul>
+
+<h3 id="license-4"><strong>License</strong></h3>
+<ul>
+  <li><strong>Apache 2.0 License</strong>:For personal and commercial use. Encourages open research and democratizes access to state-of-the-art AI capabilities.</li>
+</ul>
+
+<h3 id="links-4"><strong>Links</strong></h3>
+<ul>
+  <li><a href="https://github.com/genmoai/mochi">GitHub Repository</a></li>
+  <li><a href="https://huggingface.co/genmo/mochi-1-preview">Hugging Face</a></li>
+  <li><a href="https://github.com/genmoai/mochi">Research Paper</a></li>
+</ul>
+
+<hr />
+<h2 id="summary-table">Summary Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Model</strong></th>
+      <th><strong>Resolution</strong></th>
+      <th><strong>License</strong></th>
+      <th><strong>Year Created</strong></th>
+      <th><strong>Country of Origin</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LTX-Video</td>
+      <td>768x512</td>
+      <td>OpenRail-M</td>
+      <td>2025</td>
+      <td>Israel</td>
+    </tr>
+    <tr>
+      <td>HunyuanVideo</td>
+      <td>Variable</td>
+      <td>Tencent Hunyuan Community License</td>
+      <td>2024</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>CogVideoX-5B</td>
+      <td>720x480</td>
+      <td>CogVideoX License</td>
+      <td>2024</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>CogVideoX-5B-I2V</td>
+      <td>768x1360</td>
+      <td>CogVideoX License</td>
+      <td>2024</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>Wan2.1</td>
+      <td>480P, 720P</td>
+      <td>Apache 2.0</td>
+      <td>2025</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>Mochi</td>
+      <td>480P (Base), HD (Coming)</td>
+      <td>Apache 2.0</td>
+      <td>2024</td>
+      <td>United States</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Only Apache Licenses are truly <a href="https://opensource.org/osd">OpenSource</a> .</p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The landscape of open-source video generation is undergoing a transformative phase, driven by innovative models such as LTX-Video, HunyuanVideo, CogVideoX, Wan2.1, and Mochi. These models not only showcase impressive capabilities in video generation but also play a crucial role in democratizing access to AI technologies. Among these, models released under the Apache 2.0 license, like Wan2.1 and Mochi, stand out as fully open-source, enabling unrestricted experimentation and innovation.</p>
+
+<hr />
+
+<h2 id="further-reading">Further Reading</h2>
+
+<ul>
+  <li><a href="https://github.com/Lightricks/LTX-Video">LTX-Video GitHub</a></li>
+  <li><a href="https://github.com/Tencent/HunyuanVideo">HunyuanVideo GitHub</a></li>
+  <li><a href="https://github.com/THUDM/CogVideo">CogVideoX GitHub</a></li>
+  <li><a href="https://github.com/Wan-Video/Wan2.1">Wan2.1 GitHub</a></li>
+  <li><a href="https://github.com/genmoai/mochi">Mochi GitHub</a></li>
+</ul>
+
+<hr />
+
+    </div>
+</article>
+
+<style>
+.post-tag::before {
+    content: "#";
+}
+
+.post-tag {
+    font-size: 0.75em; /* Assuming relative-font-size(.75) is equivalent to 0.75em */
+    border: 1px solid #ccc; /* Assuming $grey-color is a grey color, you can replace #ccc with the actual color */
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0px 3px;
+    margin-right: 4px;
+}
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+</style>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Miguel Ángel Méndez Lucero</p>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
+

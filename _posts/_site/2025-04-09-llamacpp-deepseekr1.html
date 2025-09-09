@@ -1,0 +1,164 @@
+<h1 id="running-deepseek-r1-on-ubuntu-with-llamacpp">Running DeepSeek-R1 on Ubuntu with llama.cpp</h1>
+
+<p>This tutorial will guide you through installing <code class="language-plaintext highlighter-rouge">llama.cpp</code> and running the DeepSeek-R1 model locally on a Debian Distro. The process involves cloning the repository, configuring the build based on your hardware, and setting up the server to run the model.</p>
+
+<hr />
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before starting, ensure you have the following installed on your system:</p>
+
+<h3 id="system-dependencies">System Dependencies</h3>
+
+<ol>
+  <li><strong>Git</strong>: For cloning the repository.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>git
+</code></pre></div>    </div>
+  </li>
+  <li><strong>CMake</strong>: For building the project.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>cmake
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Build Essentials</strong>: Required for compiling the project.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>build-essential
+</code></pre></div>    </div>
+  </li>
+  <li><strong>CUDA (Optional)</strong>: If you plan to use CUDA-enabled GPUs.
+    <ul>
+      <li>Install CUDA toolkit from <a href="https://developer.nvidia.com/cuda-toolkit">NVIDIA’s official website</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="tools-for-downloading-the-model">Tools for Downloading the Model</h3>
+
+<ul>
+  <li><strong>wget or Hugging Face CLI</strong>: To download the model.</li>
+</ul>
+
+<hr />
+
+<h2 id="step-by-step-installation">Step-by-Step Installation</h2>
+
+<h3 id="step-1-clone-the-repository">Step 1: Clone the Repository</h3>
+
+<p>First, clone the <code class="language-plaintext highlighter-rouge">llama.cpp</code> repository to your local machine.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/ggml-org/llama.cpp.git
+</code></pre></div></div>
+
+<h3 id="step-2-navigate-to-the-repository-directory">Step 2: Navigate to the Repository Directory</h3>
+
+<p>Change directory to the cloned repository.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>llama.cpp
+</code></pre></div></div>
+
+<h3 id="step-3-pull-the-latest-changes">Step 3: Pull the Latest Changes</h3>
+
+<p>Ensure you have the latest version of the code.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull
+</code></pre></div></div>
+
+<h3 id="step-4-choose-hardware-configuration">Step 4: Choose Hardware Configuration</h3>
+
+<p>Select the appropriate build configuration based on your hardware.</p>
+
+<h4 id="for-cpu-only">For CPU Only</h4>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-B</span> build
+</code></pre></div></div>
+
+<h4 id="for-cuda-gpu">For CUDA GPU</h4>
+
+<p>If you have CUDA installed and want to leverage GPU acceleration:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-B</span> build <span class="nt">-DGGML_CUDA</span><span class="o">=</span>ON
+</code></pre></div></div>
+
+<h3 id="step-5-build-the-project">Step 5: Build the Project</h3>
+
+<p>Compile the project with the chosen configuration.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">--build</span> build <span class="nt">--config</span> Release
+</code></pre></div></div>
+
+<p><strong>Note:</strong> The build process may take several minutes, depending on your system’s performance.</p>
+
+<h3 id="step-6-copy-binaries-to-the-bin-directory">Step 6: Copy Binaries to the Bin Directory</h3>
+
+<p>After a successful build, copy the generated binaries to a directory of your choice (e.g., <code class="language-plaintext highlighter-rouge">~/bin</code>).</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/bin
+<span class="nb">cp </span>build/bin/<span class="k">*</span> ~/bin/
+</code></pre></div></div>
+
+<h3 id="step-7-download-the-deepseek-r1-model">Step 7: Download the DeepSeek-R1 Model</h3>
+
+<p>The DeepSeek-R1 model is available on Hugging Face. Use <code class="language-plaintext highlighter-rouge">wget</code> or the Hugging Face CLI to download it. For this tutorial, we will download the small 1.5B parameters version.</p>
+
+<ol>
+  <li>First, create the model directory:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.local/share/llama.cpp/models
+</code></pre></div>    </div>
+  </li>
+  <li>Download the model:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://huggingface.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-1.5B-Q8_0.gguf <span class="nt">-O</span> ~/.local/share/llama.cpp/models/DeepSeek-R1-Distill-Qwen-1.5B-Q8_0.gguf
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="step-8-run-the-server">Step 8: Run the Server</h2>
+
+<ol>
+  <li>Navigate to your bin directory:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/bin
+</code></pre></div>    </div>
+  </li>
+  <li>Run the server with the following command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./llama-server <span class="se">\</span>
+  <span class="nt">--model</span> ~/.local/share/llama.cpp/models/DeepSeek-R1-Distill-Qwen-32B-Q6_K.gguf <span class="se">\</span>
+  <span class="nt">--ctx-size</span> 32000 <span class="se">\</span>
+  <span class="nt">--host</span> 127.0.0.1 <span class="se">\</span>
+  <span class="nt">--port</span> 8080 <span class="se">\</span>
+  <span class="nt">--main-gpu</span> 0 <span class="se">\</span>
+  <span class="nt">--gpu-layers</span> 90
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--model</code>: Path to the DeepSeek-R1 model file.</li>
+  <li><code class="language-plaintext highlighter-rouge">--ctx-size</code>: Context window size (adjust as needed).</li>
+  <li><code class="language-plaintext highlighter-rouge">--host</code>: Server host address (default: localhost).</li>
+  <li><code class="language-plaintext highlighter-rouge">--port</code>: Server port (default: 8080).</li>
+  <li><code class="language-plaintext highlighter-rouge">--main-gpu</code>: Used for multi-GPU for inference.</li>
+  <li><code class="language-plaintext highlighter-rouge">--gpu-layers</code>: Number of layers to offload to GPU (adjust based on your GPU’s VRAM).</li>
+</ul>
+
+<hr />
+
+<h2 id="step-9-verify-the-installation">Step 9: Verify the Installation</h2>
+
+<ol>
+  <li>Ensure the server is running without errors.</li>
+  <li>You can access the chat UI at <code class="language-plaintext highlighter-rouge">http://localhost:8080</code> to chat with the model.</li>
+</ol>
+
+<hr />
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<ul>
+  <li><strong>Build Errors</strong>: Ensure all dependencies are installed and your CUDA setup is correct.</li>
+  <li><strong>Permission Issues</strong>: Use <code class="language-plaintext highlighter-rouge">sudo</code> where necessary or adjust file permissions.</li>
+  <li><strong>CUDA Not Detected</strong>: Verify CUDA is installed and properly configured on your system.</li>
+  <li><strong>Model Not Found</strong>: Double-check the model path and ensure the file exists.</li>
+</ul>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>You have successfully installed <code class="language-plaintext highlighter-rouge">llama.cpp</code> and set up the DeepSeek-R1 model to run locally. The server is now ready to serve requests at <code class="language-plaintext highlighter-rouge">http://localhost:8080</code>. You can use the chat interface in the link to interact with the model.</p>
+
+<p><strong>Note:</strong> Replace placeholders like <code class="language-plaintext highlighter-rouge">~/bin</code> and <code class="language-plaintext highlighter-rouge">~/.local/share/llama.cpp/models</code> with your actual directory paths as needed.</p>
+
+<p>Enjoy exploring the capabilities of DeepSeek-R1 with <code class="language-plaintext highlighter-rouge">llama.cpp</code>!</p>

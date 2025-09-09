@@ -1,0 +1,43 @@
+---
+layout: base
+---
+<article class="post">
+    {% if page.header_image %}
+        <img src="{{ page.header_image | relative_url }}" alt="{{ page.title }}" class="header-image">
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+	    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time><br>
+        {%- if page.categories.size > 0 -%}
+        {%- for category in page.categories -%}
+	<span class="post-tag"><a href=/categories#>{{ category }}</a></span>
+        {%- endfor -%}
+	{%- endif -%}
+    </div>
+    <p>{{ page.description }}</p>
+    <div class="post-content">
+        {{ content }}
+    </div>
+</article>
+
+<style>
+.post-tag::before {
+    content: "#";
+}
+
+.post-tag {
+    font-size: 0.75em; /* Assuming relative-font-size(.75) is equivalent to 0.75em */
+    border: 1px solid #ccc; /* Assuming $grey-color is a grey color, you can replace #ccc with the actual color */
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0px 3px;
+    margin-right: 4px;
+}
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+</style>
+

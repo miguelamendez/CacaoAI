@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
+        <nav>
+            <ul id="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/categories/">Categories</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>&copy; {{ "now" | date: "%Y" }} Miguel Ángel Méndez Lucero</p>
+    </footer>
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>
+
